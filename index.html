@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrabble Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Implementing a Bit of Scrabble with Drag-and-Drop</h1>
+    <!-- Game Instructions -->
+    <div class="instructions">
+      <h2>How to Play:</h2>
+      <ul>
+        <li>Create one word with no gaps between the letters. ✅</li>
+        <li>The word must contain at least 2 letters. ✅</li>
+        <li>The word must be found in the dictionary. ✅</li>
+        <li>Use the blank tile by selecting a letter from the dialog when it appears. ✅</li>
+        <li>Drag tiles from your rack to the board to form words. ✅</li>
+        <li>Click "Submit Word" to validate your word and score points. ✅</li>
+        <li>If you're stuck, click "Deal Tiles" to shuffle your rack. ❌</li>
+      </ul>
+    </div>
+    <div class="score-board">
+      <div>Word: <span id="word-display">-</span></div>
+      <div>Current Score: <span id="score-display">0</span></div>
+      <div>Remaining Tiles: <span id="remaining-tiles">93</span></div>
+      <div>Highest Score: <span id="highest-score">0</span></div>
+    </div>
+    <div class="separator-line"></div>
+    <div id="scrabble-board"></div>
+    <div id="tile-rack"></div>
+    <div class="controls">
+      <button id="submit-word">Submit Word</button>
+      <button id="deal-tiles">Deal Tiles</button>
+      <button id="reset-game">Restart Game</button>
+    </div>
+  </div>
+<!-- Letter Selection Modal -->
+<div id="letter-selection-modal">
+  <p>Select a Letter</p>
+  <div id="letter-options">
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
